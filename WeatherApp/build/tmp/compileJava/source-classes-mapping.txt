@@ -1,0 +1,10 @@
+com/tts/WeatherApp/model/Request.java
+ com.tts.WeatherApp.model.Request
+com/tts/WeatherApp/model/Response.java
+ com.tts.WeatherApp.model.Response
+com/tts/WeatherApp/WeatherAppApplication.java
+ com.tts.WeatherApp.WeatherAppApplication
+com/tts/WeatherApp/service/WeatherService.java
+ com.tts.WeatherApp.service.WeatherService
+com/tts/WeatherApp/controller/WeatherController.java
+ com.tts.WeatherApp.controller.WeatherController
