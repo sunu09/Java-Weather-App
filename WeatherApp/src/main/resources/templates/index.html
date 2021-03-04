@@ -19,14 +19,16 @@
             </button>
         </div>
     </form>
+    </form>
     <span th:if="${data != null && data.name == 'error'}">
   Invalid zip code. Weather data not found.</span>
-    <hr>
-    <!--    <h3>Forecast for <span th:text="${data.name}"></span></h3>-->
-    <div class="container bg-light justify-content-center">
-        <div class="row">
-            <div class="col col-md-6 offset-md-3">
-                <div th:if="${data != null && data.name != 'error'}">
+    <div th:if="${data != null && data.name != 'error'}">
+        <hr>
+        <!--    <h3>Forecast for <span th:text="${data.name}"></span></h3>-->
+        <div class="container bg-light justify-content-center">
+            <div class="row">
+                <div class="col col-md-6 offset-md-3">
+                    <!--                <div th:if="${data != null && data.name != 'error'}">-->
                     <br/>
                     <h3>Forecast for <span th:text="${data.name}"></span></h3>
                     <p><b>Temperature:</b> <span th:text="${data.main.get('temp')}"></span> °F</p>
@@ -35,10 +37,29 @@
                     <p><b>Conditions:</b> <span th:text="${data.weather[0].get('description')}"></span>
                         <img th:src="@{${'http://openweathermap.org/img/w/'
                 + data.weather[0].get('icon') + '.png'}}"></p>
+
                 </div>
             </div>
         </div>
+
+        <!--        Yusuf and Josh's ideas -->
+        <div>
+            <h4>Recent Searches</h4>
+            <ul>
+                <li th:each="search:${recentSearches}">
+                    <p th:text="${search.zipCode}"></p>
+                    <p th:text="${search.createdAt}"></p>
+                </li>
+            </ul>
+        </div>
+<!--                    <h4>Recent Searches</h4>-->
+<!--                <table class="table table-striped">-->
+<!--                    <tr th:each="search:${search.zipCode}">-->
+<!--                        <td th:text="${search.createdAt}"></td>-->
+<!--                    </tr>-->
+<!--                </table>-->
+
+        </div>
     </div>
-</div>
 </body>
 </html>

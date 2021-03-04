@@ -4,6 +4,10 @@ com/tts/WeatherApp/model/Response.java
  com.tts.WeatherApp.model.Response
 com/tts/WeatherApp/WeatherAppApplication.java
  com.tts.WeatherApp.WeatherAppApplication
+com/tts/WeatherApp/model/ZipCode.java
+ com.tts.WeatherApp.model.ZipCode
+com/tts/WeatherApp/repository/ZipCodeRepository.java
+ com.tts.WeatherApp.repository.ZipCodeRepository
 com/tts/WeatherApp/service/WeatherService.java
  com.tts.WeatherApp.service.WeatherService
 com/tts/WeatherApp/controller/WeatherController.java

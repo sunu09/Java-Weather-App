@@ -21,6 +21,7 @@ public class WeatherController {
      //   model.addAttribute("data", response);
         //added later
         model.addAttribute("request", new Request());
+        model.addAttribute("recentSearches", weatherService.getRecentSearches());
         return "index";
     }
 
